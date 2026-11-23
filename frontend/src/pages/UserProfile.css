@@ -1,0 +1,425 @@
+.profile-state,
+.user-profile-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+.profile-state {
+  display: grid;
+  place-content: center;
+  color: var(--text-muted);
+}
+
+.user-profile-header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  height: 64px;
+  align-items: center;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.user-profile-header button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.user-profile-header a {
+  justify-self: center;
+  color: var(--brand);
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.user-profile-layout {
+  display: grid;
+  width: min(100% - 24px, 760px);
+  gap: 14px;
+  margin: 0 auto;
+  padding: 20px 0 40px;
+}
+
+.user-profile-hero {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  align-items: center;
+  gap: 14px;
+  min-height: 118px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 100% 0%, var(--brand-soft), transparent 180px),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.user-profile-avatar {
+  position: relative;
+  display: grid;
+  width: 82px;
+  height: 82px;
+  overflow: hidden;
+  place-items: center;
+  padding: 0;
+  border: 3px solid var(--surface);
+  border-radius: 50%;
+  background: var(--brand);
+  box-shadow: 0 10px 24px var(--brand-soft);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.user-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-profile-avatar small {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  padding: 3px 5px;
+  border-radius: 999px;
+  background: rgba(20, 20, 20, 0.82);
+  color: #fff;
+  font-size: 8px;
+}
+
+.user-profile-file {
+  display: none;
+}
+
+.user-profile-hero p,
+.user-profile-card-heading p {
+  margin: 0 0 3px;
+  color: var(--brand);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.user-profile-hero h1 {
+  margin: 0 0 4px;
+  font-size: clamp(22px, 7vw, 32px);
+  line-height: 1.05;
+}
+
+.user-profile-hero div > span {
+  display: block;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 12px;
+  text-overflow: ellipsis;
+}
+
+.user-profile-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.35fr;
+  gap: 8px;
+}
+
+.user-profile-stats div,
+.user-profile-stats button {
+  min-height: 72px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-sizing: border-box;
+}
+
+.user-profile-stats div {
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.user-profile-stats strong {
+  color: var(--brand);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.user-profile-stats span {
+  margin-top: 5px;
+  color: var(--text-muted);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.user-profile-stats button {
+  border: 0;
+  background: var(--brand);
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.user-profile-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgba(20, 20, 20, 0.04);
+}
+
+.user-profile-card-heading {
+  margin-bottom: 2px;
+}
+
+.user-profile-card-heading h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.user-profile-field {
+  display: grid;
+  gap: 7px;
+}
+
+.user-profile-field span {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.user-profile-field input {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background: var(--input-bg);
+  color: var(--text);
+  font: inherit;
+  padding: 0 12px;
+}
+
+.user-profile-field input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+.user-profile-password {
+  display: grid;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.user-profile-password > p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.user-profile-feedback {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.user-profile-feedback.error {
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.user-profile-feedback.success {
+  background: color-mix(in srgb, #168c4a 10%, var(--surface));
+  color: #168c4a;
+}
+
+.user-profile-save {
+  min-height: 50px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--brand);
+  color: #fff;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.theme-switch {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+}
+
+.theme-switch button {
+  min-height: 44px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.theme-switch button.is-active {
+  background: var(--surface);
+  box-shadow: 0 4px 14px rgba(20, 20, 20, 0.08);
+  color: var(--brand);
+}
+
+.user-profile-empty {
+  display: grid;
+  min-height: 170px;
+  place-content: center;
+  justify-items: center;
+  padding: 18px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  text-align: center;
+}
+
+.user-profile-empty > span {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 20px;
+}
+
+.user-profile-empty strong {
+  font-size: 14px;
+}
+
+.user-profile-empty p {
+  margin: 5px 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.user-profile-empty button {
+  min-height: 38px;
+  margin-top: 12px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.user-profile-reels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.user-profile-reels article {
+  position: relative;
+  aspect-ratio: 9 / 12;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: #111;
+}
+
+.user-profile-reels video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-profile-reels article div {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  gap: 2px;
+  padding: 30px 9px 9px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.82));
+  color: #fff;
+}
+
+.user-profile-reels strong,
+.user-profile-reels span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-profile-reels strong {
+  font-size: 12px;
+}
+
+.user-profile-reels span {
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+.user-profile-logout {
+  min-height: 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--brand);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (min-width: 720px) {
+  .user-profile-header {
+    padding-right: max(24px, calc((100vw - 760px) / 2));
+    padding-left: max(24px, calc((100vw - 760px) / 2));
+  }
+
+  .user-profile-layout {
+    padding-top: 32px;
+  }
+
+  .user-profile-password {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .user-profile-password > p {
+    grid-column: 1 / -1;
+  }
+
+  .user-profile-reels {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
